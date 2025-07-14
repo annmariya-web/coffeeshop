@@ -1,0 +1,67 @@
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h2 {
+      margin-top: 50px;
+      color: #333;
+    }
+
+    .c1{
+      width: 120px;
+      height: 120px;
+      margin: 20px auto;
+      background-color: #4caf50;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      transition: 0.6s ease;
+      
+    }
+
+    /* 2D Transform on Hover */
+    .c2 {
+      background-color: #2196f3;
+    }
+    .box2d:hover {
+      transform: rotate(45deg) scale(1.1);
+    }
+
+    /* 3D Transform */
+    .scene {
+      perspective: 600px;
+    }
+    .c3 {
+      background-color: #e91e63;
+      transform-style: preserve-3d;
+      transform: rotateY(0deg);
+      transition: transform 0.6s;
+    }
+    .box3d:hover {
+      transform: rotateY(180deg);
+    }
+
+    /* Transition */
+    .box-transition {
+      background-color: #ff9800;
+    }
+    .box-transition:hover {
+      background-color: #e65100;
+      transform: scale(1.2);
+    }
+
+    /* Animation */
+    .box-animation {
+      background-color: #9c27b0;
+      animation: move 2s infinite alternate;
+    }
+    @keyframes move {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(150px); }
+    }
